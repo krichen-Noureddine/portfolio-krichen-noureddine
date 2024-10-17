@@ -1,0 +1,295 @@
+@charset "utf-8";
+
+// Set background to white for body
+body {
+    background-color: #b32121; // White background
+    color: #7f0b0b; // Custom text color
+}
+
+.section {
+    background-color: #ffffff; // White background for sections
+    padding: 2.15rem 1.5rem; // Retain the padding already defined
+}
+
+.card, .tile, .notification {
+    background-color: #f3f3f3; // Light grey background for cards, tiles, etc.
+    color: #000000; // Ensure text remains readable
+}
+
+// Style for section titles
+h1.title {
+    color: hsl(0, 0%, 0%); // Black text color for titles
+    font-weight: 700; // Make the title bold
+    font-size: 2rem; // Adjust the font size to your preference
+    margin-bottom: 1.5rem; // Space between title and section content
+}
+
+// Optional: Style for section subtitles if you use them
+h2.subtitle {
+    color: #f0f0f0; // Dark grey for subtitles
+    font-weight: 400; // Normal weight for subtitles
+    font-size: 1.5rem; // Adjust the font size to your preference
+    margin-bottom: 1rem; // Space between subtitle and content
+}
+
+// Add space between experience cards
+.experience-card {
+    margin-bottom: 1.75rem; 
+}
+
+// Projects Grid Styling
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); // Responsive grid with minimum card width
+    grid-gap: 1.5rem; // Gap between grid items
+    padding: 2rem 0;
+}
+
+.project-tile {
+    background-color: #ffffff; // White background for project tiles
+    border: 1px solid #e0e0e0; // Light border around each project
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+    border-radius: 8px; // Rounded corners
+    transition: transform 0.3s ease-in-out; // Smooth hover effect
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05); // Slight zoom effect on hover
+    }
+}
+
+.project-image {
+    width: 100%;
+    height: 180px; // Fixed height for project images
+    object-fit: cover; // Ensures image covers the area
+    border-radius: 8px 8px 0 0; // Rounded top corners
+}
+
+.project-title {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.project-tags {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .tag {
+        margin: 0.25rem;
+        background-color: #e0e0e0;
+        color: #555;
+        border-radius: 4px;
+    }
+}
+
+// Flickity carousel styling
+
+
+// Import Flickity CSS
+@import "~flickity/css/flickity.css";
+
+// Import Lato Google Font
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+// Update Bulma's global variables
+$family-sans-serif: "Lato", sans-serif;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Custom Styles
+.card-gap {
+    margin-top: 1.75rem;
+}
+
+.modal-trigger {
+    cursor: pointer;
+}
+
+// .modal-card-body div.content {
+//     margin: $margin-default;
+// }
+
+@import "~bulma/bulma";
+// Styling for the carousel
+
+.carousel {
+    margin: 0 auto;
+    max-width: 100%; /* Adjust max width to your needs */
+    overflow: hidden; /* Hide overflow */
+}
+
+.carousel-cell {
+    width: 90%; /* full width */
+    height: 300px;
+    background: #ffffff;
+    /* center images in cells with flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel.is-fullscreen .carousel-cell {
+    height: 100%;
+  }
+  
+  .carousel-cell img {
+    display: block;
+    max-height: 100%;
+  }
+
+.modal-card-body {
+    max-height: 400px; /* Set a maximum height for scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding-right: 15px; /* Ensure content is not flush against the scrollbar */
+    background-color: #ffffff; /* Keep modal content white */
+}
+  
+  // Grid layout for projects
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); // Responsive grid
+    grid-gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  
+  .project-tile {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .project-title {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .project-tags {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    .tag {
+      margin: 0.25rem;
+      background-color: #e0e0e0;
+      color: #555;
+      border-radius: 4px;
+    }
+  }
+  /* Make modal background transparent */
+.modal-background {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black background */
+    opacity: 1 !important; /* Ensure full opacity of the background */
+  }
+  
+  /* Ensure modal content remains visible and styled */
+  .modal-card {
+    background-color: #ffffff;
+     /* Keep modal content white */
+  }
+  .modal-card-body {
+    margin-bottom: 5rem; // Space between subtitle and content
+
+    background-color: #ffffff; /* Keep modal content white */
+    /* Disable scroll bar in the modal */
+    
+ 
+    
+  
+    overflow-y: auto; /* Allow vertical scrolling */
+ 
+  
+  
+  }
+  
+  .modal-card-head, .modal-card-foot {
+    background-color: #f9f9f9; /* Ensure header and footer match modal body */
+    border-bottom: 1px solid #ddd; /* Add subtle border to the header */
+  }
+  
+  .modal-card-title {
+    color: #333; /* Ensure the title is readable */
+  }
+  /* Dark style for modal description text */
+.modal-card-body .content  {
+
+    color: #000000; /* Dark color for text */
+    max-height: 300px; /* Set a max height for scrolling */
+    padding-right: 20px; /* Add some padding to avoid text being too close to the edge */
+    position: relative;
+     /* Position for the scroll icon */
+  }
+  .hero.is-primary{
+    background-color: #4a4a4a;
+  }
+  .hero.is-primary .title {
+    color: #fff;
+}
+.title.is-1 {
+    font-size: 3rem;
+}
+  .navbar.is-primary {
+    background-color:#4a4a4a;
+  }
+/* Scroll Icon Styling */
+.scroll-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; /* Adds some space above the icon */
+    font-size: 24px; /* Make the icon large enough */
+    color: #333; /* Color of the scroll icon */
+    animation: bounce 1.5s infinite; /* Infinite bounce animation */
+  }
+  
+  /* Bounce Animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0); /* Start at the original position */
+    }
+    40% {
+      transform: translateY(5px); /* Move the icon down */
+    }
+    60% {
+      transform: translateY(3px); /* Move the icon slightly back up */
+    }
+  }
+  .figure-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the figure horizontally */
+    max-width: 100%; /* Ensure figure does not exceed the container width */
+    padding: 10px; /* Optional: Add some padding around the figure */
+  }
+  
+  .figure-custom img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 10px; /* Optional: Add rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  }
+  
+  
+// Flickity - end
